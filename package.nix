@@ -21,11 +21,11 @@
 }:
 stdenv.mkDerivation rec {
   pname = "helium";
-  version = "0.7.10.1";
+  version = "0.8.4.1";
 
   src = fetchurl {
     url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-x86_64_linux.tar.xz";
-    sha256 = "0y3gd9w7miai8xmjghks5a2zb4vcn7wiyp8xww0hy09dcg8ggvq3";
+    sha256 = "1iza4ldb31k1338l6xrsaaz3hx2ww0b7w66a4qplvrr5xhcp1z9k";
   };
 
   nativeBuildInputs = [
@@ -79,11 +79,11 @@ stdenv.mkDerivation rec {
         # Copy all application files to lib
         cp -r . $out/lib/helium/
 
-        # Make the chrome binary executable
-        chmod +x $out/lib/helium/chrome
+        # Make the helium binary executable
+        chmod +x $out/lib/helium/helium
 
         # Create a proper wrapper that DOESN'T set BROWSER to itself
-        makeWrapper $out/lib/helium/chrome $out/bin/helium \
+        makeWrapper $out/lib/helium/helium $out/bin/helium \
           --chdir $out/lib/helium \
           --unset BROWSER
 
