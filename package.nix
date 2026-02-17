@@ -21,11 +21,11 @@
 }:
 stdenv.mkDerivation rec {
   pname = "helium";
-  version = "0.8.4.1";
+  version = "0.9.2.1";
 
   src = fetchurl {
     url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-x86_64_linux.tar.xz";
-    sha256 = "1iza4ldb31k1338l6xrsaaz3hx2ww0b7w66a4qplvrr5xhcp1z9k";
+    sha256 = "c031ecfc51283a46148ca3d4accf5000fc2ca8dbd44498653ff459b5e2cbda00";
   };
 
   nativeBuildInputs = [
