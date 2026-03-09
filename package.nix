@@ -1,6 +1,5 @@
 {
   lib,
-  stdenv,
   fetchurl,
   appimageTools,
 }: let
