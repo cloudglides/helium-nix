@@ -4,7 +4,7 @@
   appimageTools,
 }: let
   pname = "helium";
-  version = "0.13.2.1";
+  version = "0.14.6.1";
 
   src = fetchurl {
     url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-x86_64.AppImage";
